@@ -1,0 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Exo:900);
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
