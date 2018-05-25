@@ -1,6 +1,9 @@
 import React from 'react';
 
 export class Link extends React.Component {
+
+
+
     render() {
         let className;
         if (this.props.class === 'calculation') {
@@ -12,6 +15,6 @@ export class Link extends React.Component {
         } else {
             className = 'link'
         }
-        return <p className={className}>{this.props.text}</p>
+        return <p className={className} onClick={this.props.toggleMessage}>{this.props.text}</p>;
     }
 }

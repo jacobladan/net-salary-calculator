@@ -1,5 +1,5 @@
 import React from 'react';
-// import $ from 'jquery'; 
+import '../animate.css';
 import '../styles.css';
 import { InputContainer } from './input';
 import { Title } from '../Components/title';
