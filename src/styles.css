@@ -67,9 +67,7 @@ h1 {
     right: -100%;
     top: 10%;
     text-align: left;
-    animation-duration: 0.3s;
-    -webkit-animation-duration: 0.3s;
-    -moz-animation-duration: 0.3s;
+    /* visibility: hidden; */
 }
 
 h3 {
@@ -278,6 +276,16 @@ ul {
 li {
     margin-bottom: 3%;
     list-style-type: none;
+}
+
+.fadeIn {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+}
+
+.fadeOut {
+    animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
 }
 
 @media only screen and (max-width: 450px) {

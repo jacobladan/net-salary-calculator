@@ -9,6 +9,7 @@ import { ErrorMessage } from '../Components/error-message';
 import { ResultContainer } from './result';
 import { MessageContainer } from './message';
 import { MathContainer } from './math';
+import { Animated } from "react-animated-css";
 
 export class Tile extends React.Component {
 
@@ -35,14 +36,18 @@ export class Tile extends React.Component {
             <div className='main-container'>
                 <Title text='Salary Calculator'/>
                 <Link className='link' text='What do I do?' onClick={this.toggleMessage}/>
-                <MessageContainer onClick={this.toggleMessage} isVisible={this.state.isMessageVisible}/>
+                <Animated animationIn='fadeIn'  animationOut='fadeOut' isVisible={this.state.isMessageVisible} animateOnMount={false}>
+                    <MessageContainer onClick={this.toggleMessage} />
+                </Animated>
                 <InputContainer label='Select your province' type='select'/>
                 <InputContainer label='Enter your annual salary' type='text'/>
                 <ErrorMessage />
                 <Button text='Calculate'/>
                 <ResultContainer />
                 <Link className='link calculation' text='How I calculated this' class='calculation' onClick={this.toggleMath} />
-                <MathContainer onClick={this.toggleMath} isVisible={this.state.isMathVisible}/>
+                <Animated animationIn='fadeIn' animationOut='fadeOut' isVisible={this.state.isMathVisible} animateOnMount={false}>
+                    <MathContainer onClick={this.toggleMath} isVisible={this.state.isMathVisible}/>
+                </Animated>
             </div>
         );
     }
