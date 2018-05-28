@@ -1,32 +1,20 @@
 import React from 'react';
 import { CalculationMessage } from '../Components/calculation-message';
-import { CloseCalculation } from '../Components/close-calculation';
+import { Link } from '../Components/link';
 
 export class MathContainer extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            "visible": true
-        };
-        this.toggleMessage = this.toggleMessage.bind(this);
-    }
-
-    componentClass = ["math-container"];
-
-    toggleMessage() {
-        if (this.state.visible === true) {
-            this.componentClass.push("animated", "fadeOut");
-        }
-        this.setState({visible: !this.state.visible})
-    }
-
     render() {
-            return (
-                <div className={this.componentClass.join(' ')}>
-                    <CalculationMessage />
-                    <CloseCalculation onClick={this.toggleMessage}/>
-                </div>
-            );
+        let style = 'hidden';                
+        if (this.props.isVisible === true) {
+            style = 'visible';                         
+        } else {
+            style = 'hidden';
+        }
+        return (
+            <div className='math-container' style={{visibility: style}}>
+                <CalculationMessage />
+                <Link className='close-calculation'  text="close" onClick={this.props.onClick}/>
+            </div>
+        );
     }
 }
