@@ -2,13 +2,6 @@ import React from 'react';
 
 export class ProvinceList extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            list: []
-        };
-    }
-    
     formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
