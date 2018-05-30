@@ -19,7 +19,6 @@ export class SalaryInputContainer extends React.Component {
     }
     
     handleBlur() {
-        // console.log(this.state.inputHasVal)
         if (!this.state.inputHasVal) {
             this.setState({dollarSignColor: 'grey'});
         }

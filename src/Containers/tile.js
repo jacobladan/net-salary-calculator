@@ -58,8 +58,6 @@ export class Tile extends React.Component {
     }
     
     render() {
-        console.log('Initial Salary: ' + this.state.initialSalary);
-        console.log('Calculated Salary: ' + this.state.calculatedSalary);
         return (
             <div className='main-container'>
                 <Title text='Salary Calculator'/>
@@ -112,7 +110,6 @@ function calculateFederalDeduction(salary, country) {
     } catch(e) {
       console.error(e);
     } finally {
-      // console.log('federal deduction: ' + federalDeduction);
       return federalDeduction;
     }
   }
@@ -148,7 +145,6 @@ function calculateFederalDeduction(salary, country) {
   
     try {
       var rates = getProvincialRates(province);
-      // console.log(rates);
       var bracketTwoTotal = rates.amount.bracketOneAmt + rates.amount.bracketTwoAmt;
       var bracketThreeTotal = bracketTwoTotal + rates.amount.bracketThreeAmt;
       var bracketFourTotal = bracketThreeTotal + rates.amount.bracketFourAmt;
