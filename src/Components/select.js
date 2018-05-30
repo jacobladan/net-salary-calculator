@@ -1,9 +1,14 @@
 import React from 'react';
 
 export class Select extends React.Component {
+    
+    handleChange(e) {
+        this.props.onChange(e.target.value);
+    }
+
     render() {
         return (
-            <select  className='province-select'>
+            <select  className='province-select' onChange={(e) => this.handleChange(e)}>
                 <option value="alberta">AB</option>
                 <option value="british columbia">BC</option>
                 <option value="manitoba">MB</option>

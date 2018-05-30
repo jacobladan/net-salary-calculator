@@ -7,7 +7,7 @@ export class ProvinceInputContainer extends React.Component {
         return (
             <div className='input-container'>
                 <Label label={this.props.label}/>
-                <Select />
+                <Select onChange={this.props.onChange}/>
             </div> 
         )  
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListContainer } from '../Containers/list';
+import { ListContainer } from '../Containers/list-container';
 
 export class CalculationMessage extends React.Component {
     render() {

@@ -19,7 +19,7 @@ export class SalaryInputContainer extends React.Component {
     }
     
     handleBlur() {
-        console.log(this.state.inputHasVal)
+        // console.log(this.state.inputHasVal)
         if (!this.state.inputHasVal) {
             this.setState({dollarSignColor: 'grey'});
         }
@@ -34,7 +34,7 @@ export class SalaryInputContainer extends React.Component {
             <div className='input-container'>
                 <Label label={this.props.label}/>
                 <p className='dollar-sign' style={{color: this.state.dollarSignColor}}>$</p>
-                <TextInput placeholder='0.00' onFocus={this.handleFocus} onBlur={this.handleBlur} hasVal={this.hasVal}/>
+                <TextInput placeholder='0.00' onFocus={this.handleFocus} onBlur={this.handleBlur} hasVal={this.hasVal} onChange={this.props.onChange}/>
             </div>
         )
     }
