@@ -7,7 +7,7 @@ export class CalculationMessage extends React.Component {
             <div>
                 <h3>The Math</h3>
                 <ListContainer zone='Federal'/>
-                <ListContainer zone='Provincial'/>
+                <ListContainer zone='Provincial' provinceRates={this.props.provinceRates}/>
             </div>
         );
     }

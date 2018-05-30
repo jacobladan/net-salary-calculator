@@ -11,19 +11,15 @@ export class TextInput extends React.Component {
     format(e) {
         let value = parseInt(e.target.value.replace(/\D/g,''),10);
         if (!isNaN(value)) {
-            this.props.onChange(value);
             this.setState({inputVal: value.toLocaleString()});
             this.props.hasVal(true);
+            this.props.onChange(value);
         } else {
-            this.setState({inputVal: ""})
+            this.setState({inputVal: ''})
             this.props.hasVal(false);
+            this.props.onChange(0);
         }
     }
-
-    // sendValue(e) {
-    //     this.props.onChange(parseInt(e.target.value, 10));
-    //     this.setState({inputVal: parseInt(e.target.value, 10)});
-    // }
 
     render() {
         return <input 

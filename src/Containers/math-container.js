@@ -6,7 +6,7 @@ export class MathContainer extends React.Component {
     render() {
         return (
             <div className='math-container'>
-                <CalculationMessage />
+                <CalculationMessage provinceRates={this.props.provinceRates}/>
                 <Link className='close-calculation'  text="close" onClick={this.props.onClick}/>
             </div>
         );

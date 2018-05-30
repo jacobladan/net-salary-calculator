@@ -67,13 +67,13 @@ export class Tile extends React.Component {
                 <ProvinceInputContainer label='Select your province' type='select' onChange={this.setProvince}/>
                 <SalaryInputContainer label='Enter your annual salary' type='text' onChange={this.setSalary}/>
                 <ErrorMessage />
-                <ResultContainer />
+                <ResultContainer salary={this.state.calculatedSalary}/>
                 <Link className='link calculation' text='How I calculated this' class='calculation' onClick={this.toggleMath} />
                 <Animated animationIn='fadeIn'  animationOut='fadeOut' isVisible={this.state.isMessageVisible} animateOnMount={false}>
                     <MessageContainer onClick={this.toggleMessage} />
                 </Animated>
                 <Animated animationIn='fadeIn' animationOut='fadeOut' isVisible={this.state.isMathVisible} animateOnMount={false}>
-                    <MathContainer onClick={this.toggleMath} isVisible={this.state.isMathVisible}/>
+                    <MathContainer onClick={this.toggleMath} isVisible={this.state.isMathVisible} provinceRates={getProvincialRates(this.state.province)}/>
                 </Animated>
             </div>
         );
@@ -176,8 +176,6 @@ function calculateFederalDeduction(salary, country) {
     } catch(e) {
       console.error(e);
     } finally {
-    //   displayProvinceRates(rates);  
-      // console.log('province deduction: ' + provinceDeduction);
       return provinceDeduction;
     }
   }
