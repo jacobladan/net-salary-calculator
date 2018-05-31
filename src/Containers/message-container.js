@@ -1,14 +1,14 @@
 import React from 'react';
 import { DisclaimerMessage } from '../Components/disclaimer-message';
-import { Link } from '../Components/link';
+import CloseIcon from '../images/close.svg';
 
 export class MessageContainer extends React.Component {
     render() {
         return (
             <div className='message-container'>
                 <DisclaimerMessage />
-                <Link className='close-disclaimer' text="close" onClick={this.props.onClick}/>
-            </div>
-        );
-    }
+                <img src={CloseIcon} alt="close" className='disclaimer-close-icon' onClick={this.props.onClick}/>
+                </div>
+            );
+        }
 }
