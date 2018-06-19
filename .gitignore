@@ -22,3 +22,6 @@ yarn-error.log*
 
 unused
 build
+
+.firebaserc
+firebase.json

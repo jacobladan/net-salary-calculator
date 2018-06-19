@@ -1,13 +1,13 @@
 import React from 'react';
 import { CalculationMessage } from '../Components/calculation-message';
-import CloseIcon from '../images/close.svg';
+import { Link } from '../Components/link';
 
 export class MathContainer extends React.Component {
     render() {
         return (
             <div className='math-container'>
                 <CalculationMessage provinceRates={this.props.provinceRates}/>
-                <img src={CloseIcon} alt="close" className='calculation-close-icon' onClick={this.props.onClick}/>
+                <Link className='close-calculation' text='close' onClick={this.props.onClick}/>
                 </div>
             );
         }

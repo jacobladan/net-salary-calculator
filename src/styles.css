@@ -56,7 +56,7 @@ h1 {
 .message-container {
     position: absolute;
     width: 80%;
-    height: 50%;
+    height: 45%;
     min-width: 255px;
     min-height: 187px;
     background-color: #fbc3c3;
@@ -79,7 +79,6 @@ h3 {
 }
 
 .disclaimer-close-icon {
-    position: absolute;
     height: 10%;
     width: 10%;
     right: calc(50% - 20px);
@@ -95,18 +94,14 @@ h3 {
 }
 
 .close-disclaimer {
-    position: absolute;
     text-decoration: underline;
-    right: calc(50% - 20px);
-    bottom: 10%;
     font-size: 80%;
+    text-align: center;
 }
 
 .close-calculation {
-    position: absolute;
     text-decoration: underline;
-    right: calc(50% - 10px);
-    bottom: 4%;
+    text-align: center;
     font-size: 80%;
 }
 
@@ -315,18 +310,8 @@ li {
         right: calc(50% - 16px);
     }
 
-    .close-disclaimer {
-        right: calc(50% - 10px);
-        bottom: 70%;
-    }
-
     .disclaimer-close-icon {
         bottom: 65%;
-    }
-
-    .close-calculation {
-        right: calc(50% - 10px);
-        bottom: 28%;
     }
 
     .province-select {
@@ -385,23 +370,5 @@ li {
         width: 7.5%;
         top: 56%;
         left: 22.5%;
-    }
-
-    .disclaimer-close-icon {
-        bottom: 57%;
-    }
-
-    .calculation-close-icon {
-        bottom: 22%;
-    }
-}
-
-@media only screen and (max-height: 570px) {
-    .close-calculation { 
-        bottom: 15%;
-    }
-
-    .close-disclaimer { 
-        bottom: 63%;
     }
 }
