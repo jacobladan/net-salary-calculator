@@ -56,7 +56,6 @@ h1 {
 .message-container {
     position: absolute;
     width: 80%;
-    height: 45%;
     min-width: 255px;
     min-height: 187px;
     background-color: #fbc3c3;
@@ -68,7 +67,6 @@ h1 {
     right: -103%;
     top: 10%;
     text-align: left;
-    /* visibility: hidden; */
 }
 
 h3 {
@@ -78,11 +76,13 @@ h3 {
     font-size: 150%;
 }
 
-.disclaimer-close-icon {
-    height: 10%;
+.close-icon-container {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.close-icon {
     width: 10%;
-    right: calc(50% - 20px);
-    bottom: 10%;
 }
 
 .calculation-close-icon {
@@ -218,7 +218,6 @@ h3 {
 .math-container {
     position: absolute;
     width: 98%;
-    height: 104%;
     min-width: 255px;
     min-height: 187px;
     background-color: #c9ffd5;
@@ -267,108 +266,4 @@ li {
 .fadeOut {
     animation-duration: 0.3s;
     -moz-animation-duration: 0.3s;
-}
-
-@media only screen and (max-width: 450px) {
-    body {
-        background-color: #d2fbff;
-    }
-
-    .main-container {
-        width: 100%;
-        height: 100%;
-        box-shadow: none;
-        margin: 0;
-        padding: 0;
-        padding-top: 5%;
-    }
-
-    .message-container {
-        height: 100vh;
-        width: auto;
-        top: 0;
-        right: 0;
-        z-index: 99999;
-        border-radius: 0px;
-        box-shadow: none;
-    }
-
-    .math-container {
-        height: 100vh;
-        width: calc(100% - 50px);
-        top: 0;
-        left: 0;
-        z-index: 99999;
-        border-radius: 0px;
-        box-shadow: none;
-    }
-
-    .calculation-close-icon {
-        height: 10%;
-        width: 10%;
-        bottom: 30%;
-        right: calc(50% - 16px);
-    }
-
-    .disclaimer-close-icon {
-        bottom: 65%;
-    }
-
-    .province-select {
-        height: 6%;
-        min-height: 48px;
-        font-size: 100%;
-    }
-
-    .location-icon {
-        width: 7%;
-        top: 49%;
-        left: 23%;
-    }
-
-    .input {
-        height: 6%;
-        min-height: 48px;
-        font-size: 115%;
-    }
-
-    .dollar-sign {
-        top: 50%;
-        font-size: 160%;
-    }
-
-    .button {
-        height: 7%;
-        min-height: 47px;
-    }
-
-    .button:hover {
-        background-color: rgb(126, 241, 142);
-    }
-
-    .net-salary {
-        margin-right: 6%;
-        font-size: 130%;
-    }
-
-    .net-salary-label {
-        margin-left: 6%;
-        font-size: 130%;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .net-salary {
-        font-size: 100%;
-    }
-
-    .net-salary-label {
-        font-size: 100%;
-    }
-    
-    .location-icon {
-        width: 7.5%;
-        top: 56%;
-        left: 22.5%;
-    }
 }

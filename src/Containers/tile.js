@@ -1,7 +1,8 @@
 import React from 'react';
 // Styles
-import '../animate.css';
-import '../styles.css';
+import '../styles/animate.css';
+import '../styles/styles.css';
+import '../styles/responsive-styles.css';
 // Containers
 import { ProvinceInputContainer } from './province-input-container';
 import { SalaryInputContainer } from './salary-input-container';
@@ -11,7 +12,6 @@ import { MathContainer } from './math-container';
 // Components
 import { Title } from '../Components/title';
 import { Link } from '../Components/link';
-import { ErrorMessage } from '../Components/error-message';
 import { Animated } from "react-animated-css";
 // APIs
 import * as federalRates from '../api/federal-rates.json';
@@ -30,10 +30,6 @@ export class Tile extends React.Component {
             'country': 'canada',
             'calculatedSalary': 0
         };
-        this.toggleMessage = this.toggleMessage.bind(this);
-        this.toggleMath = this.toggleMath.bind(this);
-        this.setProvince = this.setProvince.bind(this);
-        this.setSalary = this.setSalary.bind(this);
     }
 
     toggleMessage() {
@@ -65,17 +61,16 @@ export class Tile extends React.Component {
         return (
             <div className='main-container'>
                 <Title text='Salary Calculator'/>
-                <Link className='link' text='What do I do?' onClick={this.toggleMessage}/>
-                <ProvinceInputContainer label='Select your province' type='select' onChange={this.setProvince}/>
-                <SalaryInputContainer label='Enter your annual salary' type='text' onChange={this.setSalary}/>
-                <ErrorMessage />
+                <Link className='link' text='What do I do?' onClick={() => this.toggleMessage()}/>
+                <ProvinceInputContainer onChange={(province) => this.setProvince(province)}/>
+                <SalaryInputContainer onChange={(salary) => this.setSalary(salary)}/>
                 <ResultContainer salary={this.state.calculatedSalary}/>
-                <Link className='link calculation' text='How I calculated this' class='calculation' onClick={this.toggleMath} />
+                <Link className='link calculation' text='How I calculated this' class='calculation' onClick={() => this.toggleMath()} />
                 <Animated animationIn='fadeIn'  animationOut='fadeOut' isVisible={this.state.isMessageVisible} animateOnMount={false}>
-                    <MessageContainer onClick={this.toggleMessage} />
+                    <MessageContainer onClick={() => this.toggleMessage()} />
                 </Animated>
                 <Animated animationIn='fadeIn' animationOut='fadeOut' isVisible={this.state.isMathVisible} animateOnMount={false}>
-                    <MathContainer onClick={this.toggleMath} isVisible={this.state.isMathVisible} provinceRates={provincialRates[this.state.province]}/>
+                    <MathContainer onClick={() => this.toggleMath()} isVisible={this.state.isMathVisible} provinceRates={provincialRates[this.state.province]}/>
                 </Animated>
             </div>
         );
@@ -84,7 +79,6 @@ export class Tile extends React.Component {
 
 function calculateFederalDeduction(salary, country) {
     var federalDeduction = 0;
-  
     try {
       var rates = federalRates[country];
       var bracketTwoTotal = rates.bracketOneAmt + rates.bracketTwoAmt;

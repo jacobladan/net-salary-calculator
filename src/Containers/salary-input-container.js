@@ -28,7 +28,7 @@ export class SalaryInputContainer extends React.Component {
     render() {
         return (
             <div className='input-container'>
-                <Label label={this.props.label}/>
+                <Label label="Enter your annual salary" class="label"/>
                 <p className='dollar-sign' style={{color: this.state.dollarSignColor}}>$</p>
                 <TextInput placeholder='0.00' onFocus={() => this.handleFocus()} onBlur={() => this.handleBlur()} hasVal={() => this.hasVal()} onChange={this.props.onChange}/>
             </div>
