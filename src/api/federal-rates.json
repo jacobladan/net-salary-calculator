@@ -1,0 +1,16 @@
+{
+  "canada": {
+    "country": "Canada",
+    "numValues": 5,
+    "bracketOneAmt": 46605,
+    "bracketTwoAmt": 46603,
+    "bracketThreeAmt": 51281,
+    "bracketFourAmt": 61353,
+    "bracketFiveAmt": 205842,
+    "bracketOnePercent": 0.15,
+    "bracketTwoPercent": 0.205,
+    "bracketThreePercent": 0.26,
+    "bracketFourPercent": 0.29,
+    "bracketFivePercent": 0.33
+  }
+}

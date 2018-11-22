@@ -24,7 +24,7 @@ export class Select extends React.Component {
                     <option value="prince edward island">PE</option>
                     <option value="quebec">QC</option>
                     <option value="saskatchewan">SK</option>
-                    <option value="yukon">UT</option>
+                    <option value="yukon">UK</option>
                 </select>
             </div>
         );
