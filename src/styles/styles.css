@@ -267,3 +267,17 @@ li {
     animation-duration: 0.3s;
     -moz-animation-duration: 0.3s;
 }
+
+.github-text {
+    text-align: center;
+    font-size: 80%;
+    margin-top: 16px;
+}
+
+.github-link {
+    color: black;
+}
+
+.github-link:visited {
+    color: black;
+}

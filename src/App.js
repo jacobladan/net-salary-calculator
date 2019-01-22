@@ -6,6 +6,9 @@ class App extends Component {
     return (
       <div className="App">
         <Tile />
+        <div className="github-text">
+          Check out the code <a className="github-link" target="_blank" href="https://github.com/jacobladan/net-salary-calculator" rel="noopener noreferrer">here</a>
+        </div>
       </div>
     );
   }

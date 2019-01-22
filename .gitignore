@@ -24,4 +24,5 @@ unused
 build
 
 .firebaserc
+/.firebase
 firebase.json
