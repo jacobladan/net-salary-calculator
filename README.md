@@ -8,5 +8,5 @@ React application - Calculates the user's net annual income after provincial and
 ## What it does
 ![purpose](https://raw.githubusercontent.com/jacobladan/net-salary-calculator/master/screen_shots/purpose.PNG)
 
-## The Math
+## The Math (Values updated as of 2018)
 ![math](https://raw.githubusercontent.com/jacobladan/net-salary-calculator/master/screen_shots/the_math.PNG)
